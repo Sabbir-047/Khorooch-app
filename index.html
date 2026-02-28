@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khorooch | Login</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/logo-use.png" type="image/x-icon">
+    <!-- tailwind and daisyUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- all themes of daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- styles -->
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+
+    <div class="logo w-52 mx-auto pt-32">
+        <img src="assets/Khorooch-main.png" alt="logo">
+    </div>
+
+    <!-- form portion -->
+    <fieldset class="fieldset bg-white border-base-300 rounded-box w-xs border p-8 mx-auto mt-6 space-y-5 rounded-3xl">
+        <!-- <legend class="fieldset-legend">Login</legend> -->
+
+        <div>
+            <label class="label font-medium text-lg mb-3">Mobile Number</label>
+            <input id="phn-number" type="email" class="input rounded-full py-4 px-5" value="123456789" placeholder="Enter Your Number" />
+        </div>
+
+        <div>
+            <label class="label font-medium text-lg mb-3">4 Digit Pin</label>
+            <input id="pin-number" type="password" class="input rounded-full py-4 px-5" placeholder="Enter 4 Digit Pin" />
+        </div>
+
+        <button id="btn-login" class="btn btn-active btn-success rounded-full text-xl font-semibold">Login</button>
+    </fieldset>
+
+
+    <!-- js -->
+     <script src="script/login.js"></script>
+</body>
+
+</html>

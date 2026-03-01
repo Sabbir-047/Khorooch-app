@@ -40,7 +40,7 @@
                     <img src="assets/logo-use.png" alt="logo">
                 </div>
                 <div>
-                    <h3 class="font-extrabold text-lg">45000</h3>
+                    <h3 id="main-balance" class="font-extrabold text-lg">45000</h3>
                     <p class="text-sm text-gray-400">Available Balance</p>
                 </div>
             </div>
@@ -63,33 +63,73 @@
             <p class="text-gray-400 font-normal">Enjoy easy and convenient financial services with us. Cashout charge is
                 low and </p>
         </div>
+        <!-- MFS Options -->
         <div class="content grid grid-cols-3 py-6 gap-4 auto-rows-fr">
-            <button class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft content-center justify-items-center rounded-2xl">
+            <button
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-1.png" alt="add-money">
                 <p class="text-sm font-normal text-gray-500">Add Money</p>
             </button>
-            <button class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft content-center justify-items-center rounded-2xl">
+            <button
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-2.png" alt="Cashout">
                 <p class="text-sm font-normal text-gray-500">Cashout</p>
             </button>
-            <button class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft content-center justify-items-center rounded-2xl">
+            <button
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-3.png" alt="transfer-money">
                 <p class="text-sm font-normal text-gray-500">Transfer Money</p>
             </button>
-            <button class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft content-center justify-items-center rounded-2xl">
+            <button
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-4.png" alt="Get Bonus">
                 <p class="text-sm font-normal text-gray-500">Get Bonus</p>
             </button>
-            <button class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft content-center justify-items-center rounded-2xl">
+            <button
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-5.png" alt="Pay Bill">
                 <p class="text-sm font-normal text-gray-500">Pay Bill</p>
             </button>
-            <button class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft content-center justify-items-center rounded-2xl">
+            <button
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-6.png" alt="Transactions">
                 <p class="text-sm font-normal text-gray-500">Transactions</p>
             </button>
         </div>
     </section>
+
+
+    <!-- cashout section -->
+    <section class="w-11/12 mx-auto px-4">
+        <h2 class="text-lg font-semibold text-black">Cashout</h2>
+        <fieldset
+            class="fieldset bg-white border-base-300 rounded-box w-sm border p-8 mx-auto mt-6 space-y-5 rounded-3xl">
+            <!-- agent number -->
+            <div>
+                <label class="label font-medium text-lg mb-3">Agent Number</label>
+                <input id="agent-number" type="number" class="input rounded-full py-4 px-5" value="123456789"
+                    placeholder="Enter 11 digit Number" />
+            </div>
+            <!-- cashout amount -->
+            <div>
+                <label class="label font-medium text-lg mb-3">Amount</label>
+                <input id="amount-number" type="number" class="input rounded-full py-4 px-5"
+                    placeholder="Enter Amount To Withdraw" />
+            </div>
+            <!-- 4 digit pin -->
+            <div>
+                <label class="label font-medium text-lg mb-3">Pin Number</label>
+                <input id="pin-number" type="password" class="input rounded-full py-4 px-5"
+                    placeholder="Enter 4 Digit Pin" />
+            </div>
+            <!-- Cashout button -->
+            <button id="btn-cashout" class="btn btn-active btn-success rounded-full text-xl font-semibold">Withdraw
+                Money</button>
+        </fieldset>
+    </section>
+
+    <!-- cashout script -->
+    <script src="script/cashout.js"></script>
 </body>
 
 </html>

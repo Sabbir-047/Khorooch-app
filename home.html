@@ -33,7 +33,7 @@
 
 <body class="min-h-screen max-w-md bg-base-200 mx-auto">
     <!-- header section -->
-    <header class="border-b-2 border-gray-300">
+    <header class="border-b-2 border-gray-300 sticky top-0green-600-300">
         <section class="w-11/12 mx-auto py-4 px-0 flex justify-between items-center">
             <div class="left flex justify-between items-center gap-2">
                 <div class="logo max-w-14">
@@ -66,32 +66,32 @@
         <!-- MFS Options -->
         <div class="content grid grid-cols-3 py-6 gap-4 auto-rows-fr">
             <button
-                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-1.png" alt="add-money">
                 <p class="text-sm font-normal text-gray-500">Add Money</p>
             </button>
             <button
-                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-2.png" alt="Cashout">
                 <p class="text-sm font-normal text-gray-500">Cashout</p>
             </button>
             <button
-                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-3.png" alt="transfer-money">
                 <p class="text-sm font-normal text-gray-500">Transfer Money</p>
             </button>
             <button
-                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-4.png" alt="Get Bonus">
                 <p class="text-sm font-normal text-gray-500">Get Bonus</p>
             </button>
             <button
-                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-5.png" alt="Pay Bill">
                 <p class="text-sm font-normal text-gray-500">Pay Bill</p>
             </button>
             <button
-                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-blue-500 content-center justify-items-center rounded-2xl">
+                class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-6.png" alt="Transactions">
                 <p class="text-sm font-normal text-gray-500">Transactions</p>
             </button>
@@ -107,7 +107,7 @@
             <!-- agent number -->
             <div>
                 <label class="label font-medium text-lg mb-3">Agent Number</label>
-                <input id="agent-number" type="number" class="input rounded-full py-4 px-5" value="123456789"
+                <input id="agent-number" type="number" class="input rounded-full py-4 px-5" value="12345678910"
                     placeholder="Enter 11 digit Number" />
             </div>
             <!-- cashout amount -->
@@ -127,7 +127,11 @@
                 Money</button>
         </fieldset>
     </section>
-
+    
+    
+    
+    <!-- Common Script -->
+     <script src="script/common.js"></script>
     <!-- cashout script -->
     <script src="script/cashout.js"></script>
 </body>

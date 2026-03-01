@@ -1,5 +1,4 @@
 document.getElementById("btn-cashout").addEventListener("click", function () {
-    console.log("dsfsd");
     // get agent number, amount, pin and main balance
 
     // ---------- Normal Approach
@@ -28,17 +27,11 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
 
     // get agent number, amount, pin and main balance
     //  ------- Optimized Common Funch---------
-    let mainBalanceField = document.getElementById("main-balance");
     let mainBalance = getInnerText("main-balance");
 
     // ---------- agent -----------
     let agentNumber = getValue("agent-number");
-    // validation
-    let agentNumberStr = String(agentNumber);
-    if (agentNumberStr.length < 11 || agentNumberStr.length > 11) {
-        alert("Provide a valid number");
-        return;
-    }
+    console.log(agentNumber);
 
     // ------------- amount -------------
     let amountNumField = document.getElementById("amount-number");
@@ -48,7 +41,7 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
     let pinNumField = document.getElementById("pin-number");
     let pinNumber = pinNumField.value;
     // console.log(pinNumber);
-    if (agentNumber == "12345678910" && pinNumber == "1234") {
+    if (String(agentNumber).length == 11 && pinNumber == "1234") {
         // validations
         if (mainBalance < amountNumber) {
             alert("Please CashIn before withdraw");
@@ -56,6 +49,7 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
         }
         let cashOut = mainBalance - amountNumber;
         setBalance(cashOut);
+        // clear fields
         amountNumField.value = "";
         pinNumField.value = "";
         alert("Cashout " + amountNumber + " successful");

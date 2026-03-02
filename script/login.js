@@ -15,7 +15,8 @@ document.getElementById("btn-login").addEventListener("click", function () {
         pinField.value = "";
         // redirect to the home page
         // window.location.replace("/home.html");
-        window.location.assign("../home.html");
+        // window.location.assign("../home.html");
+        window.location.href = "home.html";
     } else {
         alert("please give valid credentials");
     }

@@ -23,8 +23,6 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
     let amountNumber = Number(amountNumberStr);
 */
 
-
-
     // get agent number, amount, pin and main balance
     //  ------- Optimized Common Funch---------
     let mainBalance = getInnerText("main-balance");
@@ -53,6 +51,20 @@ document.getElementById("btn-cashout").addEventListener("click", function () {
         amountNumField.value = "";
         pinNumField.value = "";
         alert("Cashout " + amountNumber + " successful");
+
+        // 1 - take the history container\
+        const history = document.getElementById("history-container");
+        // 2 - Create a new div
+        const newHistory = document.createElement("div");
+        // 3 - add innerHtml to the new div
+        newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+            Cashout ${amountNumber} from ${agentNumber},
+            at ${new Date()}
+        </div>
+        `;
+        // 4 - append new div to the history container
+        history.append(newHistory);
     } else {
         alert("Please try again with valid number or pin");
     }

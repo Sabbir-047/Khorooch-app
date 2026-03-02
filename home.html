@@ -65,12 +65,12 @@
         </div>
         <!-- MFS Options -->
         <div class="content grid grid-cols-3 py-6 gap-4 auto-rows-fr">
-            <button
+            <button onclick="chooseService('add-money')"
                 class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-1.png" alt="add-money">
                 <p class="text-sm font-normal text-gray-500">Add Money</p>
             </button>
-            <button
+            <button onclick="chooseService('cash-out')"
                 class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-2.png" alt="Cashout">
                 <p class="text-sm font-normal text-gray-500">Cashout</p>
@@ -90,7 +90,7 @@
                 <img src="assets/opt-5.png" alt="Pay Bill">
                 <p class="text-sm font-normal text-gray-500">Pay Bill</p>
             </button>
-            <button
+            <button onclick="chooseService('transaction-history')"
                 class="grid grid-cols border border-gray-300 h-full p-6 cursor-pointer btn btn-soft hover:border-green-600 content-center justify-items-center rounded-2xl">
                 <img src="assets/opt-6.png" alt="Transactions">
                 <p class="text-sm font-normal text-gray-500">Transactions</p>
@@ -101,7 +101,7 @@
 
 
     <!-- Add money section -->
-    <section id="add-money" class="w-11/12 mx-auto px-4">
+    <section id="add-money" class="w-11/12 mx-auto px-4 hidden">
         <h2 class="text-lg font-semibold text-black">Add Money</h2>
         <fieldset
             class="fieldset bg-white border-base-300 rounded-box w-sm border p-8 mx-auto mt-6 space-y-5 rounded-3xl">
@@ -119,7 +119,7 @@
             <div>
                 <label class="label font-medium text-lg mb-3">Bank Account Number</label>
                 <input id="bank-account-number" type="number" class="input rounded-full py-4 px-5"
-                    placeholder="Enter 11 digit account number" value="12345678900"/>
+                    placeholder="Enter 11 digit account number" value="12345678900" />
             </div>
             <!--  Amount Number -->
             <div>
@@ -141,7 +141,7 @@
 
 
     <!-- cashout section -->
-    <section class="w-11/12 mx-auto px-4 ">
+    <section id="cash-out" class="w-11/12 mx-auto px-4 hidden">
         <h2 class="text-lg font-semibold text-black">Cashout</h2>
         <fieldset
             class="fieldset bg-white border-base-300 rounded-box w-sm border p-8 mx-auto mt-6 space-y-5 rounded-3xl">
@@ -171,12 +171,25 @@
 
 
 
+    <!-- Transaction History -->
+    <section id="transaction-history" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-lg font-semibold text-black">Transactions</h2>
+        <div class="space-y-5" id="history-container">
+            <!-- <div class="transaction-card p-5 bg-base-100">
+
+            </div> -->
+        </div>
+    </section>
+
+
 
 
 
 
     <!-- Common Script -->
     <script src="script/common.js"></script>
+    <!-- Select Service  -->
+    <script src="script/select-service.js"></script>
     <!-- Add Money Script -->
     <script src="script/addMoney.js"></script>
     <!-- cashout script -->

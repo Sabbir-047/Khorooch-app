@@ -20,3 +20,21 @@ function setBalance(value){
     const balanceElement = document.getElementById('main-balance');
     balanceElement.innerText = value;
 }
+
+
+
+// element id -> choose service
+function chooseService(service){
+    const addMoneyService = document.getElementById('add-money');
+    const cashOutService = document.getElementById('cash-out');
+    const history = document.getElementById('transaction-history');
+
+    // hide all
+    addMoneyService.classList.add('hidden');
+    cashOutService.classList.add('hidden');
+    history.classList.add('hidden');
+
+    // remove only choosen one
+    const selected = document.getElementById(service);
+    selected.classList.remove('hidden');
+}
